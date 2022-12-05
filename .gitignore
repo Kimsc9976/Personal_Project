@@ -1,0 +1,9 @@
+
+## 무시할 폴더들
+node_modules/
+set_file/
+
+
+## 무시할 파일들
+/sample.txt
+/fileread.js
