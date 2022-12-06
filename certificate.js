@@ -1,31 +1,56 @@
 const http = require('http');
 const fs = require('fs');
 const URL = require('url');
-const topic = require('./lib/topic')
+const topic = require('./lib/topic');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended : false}));
+app.use(express.static('./src'));
 
-let app = http.createServer(function(request,response){
-  let url = request.url;
 
-  let queryData = URL.parse(url,true).query;
-  let pathname = URL.parse(url,true).pathname;
+app.get('/', (req, res) =>
+{
+  topic.Log_in(req, res);
 
-  console.log(URL.parse(url,true));
-  if(pathname ==='/')
-  {
-    topic.Log_in(request, response);
-  }
-  else if(pathname === '/Signup')
-  {
-    topic.Sign_up(request, response);
-  }
-  else if(pathname === '/Signup_Process')
-  {
-    topic.Signup_process(request, response);
-  }
-  else
-  {
-    response.writeHead(404);
-    response.end("Not Found");
-  }
-});
-app.listen(3000);
+})
+
+app.get('/Signup', (req, res) =>
+{
+  topic.Sign_up(req, res);
+})
+
+app.post('/Signup_process', (req, res) =>
+{
+  topic.Signup_process(req, res);
+})
+
+
+
+app.listen(3000, () => console.log("example app "));
+// let app = http.createServer(function(request,response){
+//   let url = request.url;
+
+//   let queryData = URL.parse(url,true).query;
+//   let pathname = URL.parse(url,true).pathname;
+
+//   console.log(URL.parse(url,true));
+//   if(pathname ==='/')
+//   {
+//     topic.Log_in(request, response);
+//   }
+//   else if(pathname === '/Signup')
+//   {
+//     topic.Sign_up(request, response);
+//   }
+//   else if(pathname === '/Signup_Process')
+//   {
+//     topic.Signup_process(request, response);
+//   }
+//   else
+//   {
+//     response.writeHead(404);
+//     response.end("Not Found");
+//   }
+// });
+// app.listen(3000);

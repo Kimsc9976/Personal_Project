@@ -2,3 +2,4 @@
 npm install mysql
 npm install body-parser
 npm install sanitize-html
+npm install uuid

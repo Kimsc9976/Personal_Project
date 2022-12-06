@@ -22,7 +22,7 @@ INSERT INTO `author` VALUES (2,'가나다','들러리');
 --
 
 CREATE TABLE `inform` (
-  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(36) NOT NULL DEFAULT (UUID()), 
   `ID` varchar(30) NOT NULL,
   `Password` text NOT NULL,
   `Email` text NOT NULL,
@@ -31,12 +31,12 @@ CREATE TABLE `inform` (
   `Phone_Tail` SMALLINT NOT NULL,
   `created` datetime NOT NULL,
   `Peronsal_idx` int(11) NOT NULL,
-  PRIMARY KEY (`idx`)
+  PRIMARY KEY (`uuid`)
 );
 
 --
 -- Dumping data for table `inform`
 --
 
-INSERT INTO `inform` VALUES (1,'ksc9595','zxc123asd456','tncks097@naver.com',010,9955,7124,NOW(),1);
-INSERT INTO `inform` VALUES (2,'qaws1234','q1w2e3r4','khs5200@knu.ac.kr',010,1234,5678,NOW(),2);
+INSERT INTO `inform` VALUES ('5320a731-be11-4d9f-9c88-8726d79f6f63','ksc9595','zxc123asd456','tncks097@naver.com',010,9955,7124,NOW());
+INSERT INTO `inform` VALUES ('58821cc2-c01c-409e-9570-78ddfa706c93','qaws1234','q1w2e3r4','khs5200@knu.ac.kr',010,1234,5678,NOW());
