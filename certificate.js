@@ -5,7 +5,6 @@ const topic = require('./lib/topic')
 
 let app = http.createServer(function(request,response){
   let url = request.url;
-  console.log("이거", url);
 
   let queryData = URL.parse(url,true).query;
   let pathname = URL.parse(url,true).pathname;
@@ -15,9 +14,13 @@ let app = http.createServer(function(request,response){
   {
     topic.Log_in(request, response);
   }
-  else if(pathname === '/Signup.html')
+  else if(pathname === '/Signup')
   {
     topic.Sign_up(request, response);
+  }
+  else if(pathname === '/Signup_Process')
+  {
+    topic.Signup_process(request, response);
   }
   else
   {
