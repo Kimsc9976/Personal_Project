@@ -30,7 +30,6 @@ CREATE TABLE `inform` (
   `Phone_Mid` SMALLINT NOT NULL,
   `Phone_Tail` SMALLINT NOT NULL,
   `created` datetime NOT NULL,
-  `Peronsal_idx` int(11) NOT NULL,
   PRIMARY KEY (`uuid`)
 );
 
