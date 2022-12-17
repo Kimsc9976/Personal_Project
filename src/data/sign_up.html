@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>Sign up - HTML</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1>Sign up</h1>
+  <form action = "/Signup_Process" method = "post">
+  <br>
+  <table>
+    <tr>
+        <td>ID : </td>
+        <td><input type = "text" name = "ID" ></td>
+        <td><button type = "button" name = "Check_ID" onclick = "isIDduplicate()" >중복 확인</button></td>
+    </tr>
+    <tr>
+      <td>PW : </td>
+      <td><input type = "text" name = "PW" Id = "PW"></td>
+    </tr>
+    <tr>
+      <td>Check PW : </td>
+      <td><input type = "text" name = "Confirm_PW" Id = "Confirm_PW" ></td>
+      <td><button type = "button" onclick = "Confirm()">비밀번호 확인</button></td>
+    </tr>
+    <tr>
+      <td>Email : </td>
+      <td><input type = "text" name = "Email" ></td>
+    </tr>
+  </table>
+  <p> Phone No. : <input type = "text" name = "Phone_Head" > - 
+  <input type = "text" name = "Phone_Mid" > - 
+  <input type = "text" name = "Phone_Tail" >
+  </p>
+  <br>
+  <button type = "submit" name = "Sign_Finish" >가입완료</button>
+  </form>
+
+  <script>
+    function isIDduplicate() {
+      // TODO: DB로 접근 해야함
+    }
+    function Confirm(){
+      let pw = document.getElementById("PW").value;
+      let con_pw = document.getElementById("Confirm_PW").value;
+      if(pw < 4)
+        return alert("비밀번호 자리수를 재설정 해주세요.");
+
+      if (pw === con_pw)
+        return alert("비밀번호가 일치합니다.");
+      
+      return alert("비밀번호가 일치하지 않습니다. ");
+    }
+  </script>
+</body>
+</html>

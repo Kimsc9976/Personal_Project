@@ -25,32 +25,9 @@ app.post('/Signup_process', (req, res) =>
   topic.Signup_process(req, res);
 })
 
-
+app.post('/Signin', (req, res) =>
+{
+  topic.Signin_process(req, res);
+})
 
 app.listen(3000, () => console.log("example app "));
-// let app = http.createServer(function(request,response){
-//   let url = request.url;
-
-//   let queryData = URL.parse(url,true).query;
-//   let pathname = URL.parse(url,true).pathname;
-
-//   console.log(URL.parse(url,true));
-//   if(pathname ==='/')
-//   {
-//     topic.Log_in(request, response);
-//   }
-//   else if(pathname === '/Signup')
-//   {
-//     topic.Sign_up(request, response);
-//   }
-//   else if(pathname === '/Signup_Process')
-//   {
-//     topic.Signup_process(request, response);
-//   }
-//   else
-//   {
-//     response.writeHead(404);
-//     response.end("Not Found");
-//   }
-// });
-// app.listen(3000);
