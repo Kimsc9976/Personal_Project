@@ -11,21 +11,35 @@ app.use(express.static('./src'));
 
 app.get('/', (req, res) =>
 {
-  topic.Log_in(req, res);
+  res.sendFile(__dirname + '/src/data/sign_in.html');
 
 })
 
-app.get('/Signup', (req, res) =>
+app.get('/sign_up', (req, res) =>
 {
-  topic.Sign_up(req, res);
+  res.sendFile(__dirname + '/src/data/sign_up.html');
 })
 
-app.post('/Signup_process', (req, res) =>
+app.get('/sign_in', (req, res) =>
+{
+  res.sendFile(__dirname + '/src/data/sign_up.html');
+})
+
+// 그 뭐시야 중복체크 확인 해야함
+app.get('/IDdupli', (req, res) =>
+{
+  let post = req.body;
+
+  console.log(post);
+  res.send("ID_Duplication");
+})
+
+app.post('/sign_up', (req, res) =>
 {
   topic.Signup_process(req, res);
 })
 
-app.post('/Signin', (req, res) =>
+app.post('/sign_in', (req, res) =>
 {
   topic.Signin_process(req, res);
 })

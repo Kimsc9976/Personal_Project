@@ -6,10 +6,11 @@
 </head>
 <body>
   <h1>Sign in</h1>
-  <p> ID : <input type = "text" name = "ID" >  </p>
-  <p> PW : <input type = "text" name = "PW" >  </p>
-  
-  <button type = "button" name = "Log in" >Log in</button>
-  <button type = "button" name = "Sign up" onclick="location.href='/Signup'">Sign up</button>
+  <form action = /sign_in method = "post" id = "login"> 
+    <p> ID : <input type = "text" name = "ID" >  </p>
+    <p> PW : <input type = "text" name = "PW" >  </p>
+  </form>
+  <button type = "submit" name = "Log in" form = "login">Log in</button>
+  <button type = "button" name = "Sign up" onclick="location.href='/sign_up'">Sign up</button>
 </body>
 </html>
