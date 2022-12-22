@@ -11,18 +11,21 @@ app.use(express.static('./src'));
 
 app.get('/', (req, res) =>
 {
-  res.sendFile(__dirname + '/src/data/sign_in.html');
+  // 토큰이 없으면
+  res.sendFile(process.cwd() + '/src/data/sign_in.html');
 
+  // 토큰이 있으면
+  
 })
 
 app.get('/sign_up', (req, res) =>
 {
-  res.sendFile(__dirname + '/src/data/sign_up.html');
+  res.sendFile(process.cwd() + '/src/data/sign_up.html');
 })
 
 app.get('/sign_in', (req, res) =>
 {
-  res.sendFile(__dirname + '/src/data/sign_up.html');
+  res.sendFile(process.cwd() + '/src/data/sign_up.html');
 })
 
 // 그 뭐시야 중복체크 확인 해야함
