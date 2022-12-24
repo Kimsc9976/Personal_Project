@@ -12,8 +12,8 @@
   <table>
     <tr>
         <td>ID : </td>
-        <td><input type = "text" name = "ID"></td>
-        <td><button type = "button" name = "Check_ID" onclick = "location.href='/IDdupli'" >중복 확인</button></td>
+        <td><input type = "text" name = "ID", Id = "ID"></td>
+        <td><button type = "button" name = "Check_ID" onclick = "isIDduplicate()" >중복 확인</button></td>
     </tr>
     <tr>
       <td>PW : </td>
@@ -40,6 +40,10 @@
   <script>
     function isIDduplicate() {
       // TODO: DB로 접근 해야함
+      let ID = document.getElementById('ID').value;
+      
+      location.href='/IDdupli/?ID='+ID;
+      
     }
     function Confirm(){
       let pw = document.getElementById("PW").value;

@@ -6,3 +6,5 @@ npm install uuid
 npm install cookie
 npm install express
 npm install express-session
+npm install jsonwebtoken
+npm install rand-token
