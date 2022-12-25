@@ -1,11 +1,9 @@
-const http = require('http');
 const fs = require('fs');
-const URL = require('url');
 const topic = require('./lib/topic');
+const admin = require('./lib/admin');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const logic = require('./lib/logic');
 const j = require('./lib/jwt');
 
 app.use(bodyParser.urlencoded({extended : false}));
@@ -36,7 +34,6 @@ app.get('/', async (req, res) =>
 app.post('/sign_in', (req, res) =>
 {
   topic.Signin_process(req, res);
-  
 })
 
 app.get('/sign_up', (req, res) =>
@@ -45,21 +42,10 @@ app.get('/sign_up', (req, res) =>
   res.sendFile(process.cwd() + '/src/data/sign_up.html');
 })
 
-app.get('/IDdupli', async (req, res) =>
+app.get('/IDdupli', (req, res) =>
 {
-  let url = req.url;
-  let query = URL.parse(url,true).query;
-  let result  = await logic.ID_confirm(query.ID);
-
-  let config = result[0], msg = result[1];
-  if(config)
-  {
-    res.send(logic.alert_msg(msg));
-  }
-  if(!config)
-  {
-    res.send(logic.alert_msg(msg));
-  }
+  console.log("ID duplicating")
+  topic.IDduplicate(req, res);
 })
 
 app.post('/sign_up', (req, res) =>
@@ -67,5 +53,9 @@ app.post('/sign_up', (req, res) =>
   topic.Signup_process(req, res);
 })
 
+app.get('/admin', (req, res) =>
+{ 
+  admin.page(req, res);
+});
 
 app.listen(3000, () => console.log("example app "));

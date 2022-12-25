@@ -7,4 +7,4 @@ module.exports = {
   "expiresIn" : "5m",
   "issuer" : "issuer"    
   }
-}
+} //json으로 변환 필요
