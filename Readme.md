@@ -19,7 +19,8 @@
 
 ## 3. 기술 스택 : Node.js, Express.js, MySQL, JWT
 
-## 4. 아키텍쳐 : ![image](https://user-images.githubusercontent.com/68680106/209464685-38e3d7fb-d22f-4d77-8a25-1e077b99d22c.png)
+## 4. 아키텍쳐 : 
+![image](https://user-images.githubusercontent.com/68680106/209464685-38e3d7fb-d22f-4d77-8a25-1e077b99d22c.png)
 
 ## 5. 구현 : 
       - 1. DB4PP.sql 에는 테스트 data가 담겨져있습니다.
