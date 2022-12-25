@@ -7,14 +7,18 @@
 - 3. 인증서버 API (authorization)
 - 4. DB를 사용하여 데이터 저장
 - 5. Password Encryption 
-      --> `이런 보안부분은 처음이라 salt의 저장 위치를 특정짓지 못하겠습니다.`
+      --> `Q. salt의 저장 위치를 특정짓지 못하겠습니다.`
 - 6. JWT를 이용한 access token & refresh token 제출
+      --> `Q. Secret Key의 경우 지속적인 업데이트가 필요한가요?.`
 ## 2. 진행이 안 된 부분
 - 1. JWT를 이용한 authentication
-- 2. Email 인증 
-- 3. 프로그램 실행 시 MySQL 자동실행
-- 4. 데이터 분할 구체화  --> `(DB에 inform과 person(user)가 있지만, person에 대한 정보는 사용하고 있지 않음)`
-- 5. logout key 구현 안 됨
+      --> `Q. Refresh token을 이용해 acces token을 다시 제공하는 것에 어려움이 있었습니다. 이는 어떻게 처리를 하나요?`
+- 2. 관리자 페이지 접근권한 부여
+      --> `Q. 특정 ID에 관리자 권한을 부여하고 싶은데, 감이 잡히지 않아서 어려웠습니다. `
+- 3. Email 인증 
+- 4. 프로그램 실행 시 MySQL 자동실행
+- 5. 데이터 분할 구체화  --> `(DB에 inform과 person(user)가 있지만, person에 대한 정보는 사용하고 있지 않음)`
+- 6. logout key 구현 안 됨
 
 
 ## 3. 기술 스택 : 
