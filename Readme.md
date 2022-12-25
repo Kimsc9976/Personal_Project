@@ -17,7 +17,11 @@
 - 5. logout key 구현 안 됨
 
 
-## 3. 기술 스택 : Node.js, Express.js, MySQL, JWT
+## 3. 기술 스택 : 
+- 1. Node.js
+- 2. Express.js
+- 3. MySQL
+- 4. JWT
 
 ## 4. 아키텍쳐 : 
 ![image](https://user-images.githubusercontent.com/68680106/209464807-3f9a8f9d-9bfb-44b0-b090-878915b7538c.png)
