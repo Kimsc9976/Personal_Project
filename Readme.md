@@ -2,13 +2,13 @@
 
 
 ## 1. 12/25 진행이 마무리 된 부분
-
 - 1. 가입페이지, 로그인페이지
 - 2. 유저 관리 페이지(유저 정보는 나오나 관리를 할 수 있는 tool은 제작 못함)
-- 3. 인증서버 API (authorization )
+- 3. 인증서버 API (authorization)
 - 4. DB를 사용하여 데이터 저장
 - 5. Password Encryption 
       --> `이런 보안부분은 처음이라 salt의 저장 위치를 특정짓지 못하겠습니다.`
+- 6. JWT를 이용한 access token & refresh token 제출
 ## 2. 진행이 안 된 부분
 - 1. JWT를 이용한 authentication
 - 2. Email 인증 
@@ -19,8 +19,9 @@
 
 ## 3. 기술 스택 : Node.js, Express.js, MySQL, JWT
 
-## 4. 아키텍쳐 ![image](https://user-images.githubusercontent.com/68680106/209464573-422811b4-e851-457d-95ad-c0e93684f160.png)
+## 4. 아키텍쳐 : ![image](https://user-images.githubusercontent.com/68680106/209464685-38e3d7fb-d22f-4d77-8a25-1e077b99d22c.png)
 
+## 5. 구현 : 
       - 1. DB4PP.sql 에는 테스트 data가 담겨져있습니다.
 
       - 2. Have_to_install.txt 파일에는 초기 세팅에 설치한 module이 있습니다.
@@ -42,13 +43,13 @@
       
       - 5. /src/inform에는 secretkey와 user_data를 저장할 수 있는 파일들을 만들었습니다. 
 
-## 4. 후에 작업할 부분 :
-      - logout 구현
-      - 관리자 페이지 접근권한 부여
-      - User 관리
-
-## 5. test data : 
+## 참조. test data : 
       - ksc9595 는 /admin 으로 접근이 됩니다.
       - tncks097 은 blog로 접근 합니다.
       1. ID : ksc9595,  PW : zxc123asd456
       2. ID : tncks097, PW : zxc123  
+
+## **후에 작업할 부분**
+      - logout 구현
+      - 관리자 페이지 접근권한 부여
+      - User 관리
