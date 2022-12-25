@@ -17,7 +17,10 @@
 - 5. logout key 구현 안 됨
 
 
-## 3. 파일 정리 : Node.js, Express.js + MySQL
+## 3. 기술 스택 : Node.js, Express.js, MySQL, JWT
+
+## 4. 아키텍쳐 ![image](https://user-images.githubusercontent.com/68680106/209464573-422811b4-e851-457d-95ad-c0e93684f160.png)
+
       - 1. DB4PP.sql 에는 테스트 data가 담겨져있습니다.
 
       - 2. Have_to_install.txt 파일에는 초기 세팅에 설치한 module이 있습니다.
